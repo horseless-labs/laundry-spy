@@ -102,3 +102,36 @@ I am willing to bet right off that, yes, using code from the Minimal People Sens
 * [“A CASE OF MULTI-LABEL IMAGE CLASSIFICATION”](https://towardsdatascience.com/fast-ai-season-1-episode-3-a-case-of-multi-label-classification-a4a90672a889)
 * [Lesson 3: Data blocks; Multi-label classification; Segmentation](https://course.fast.ai/videos/?lesson=3)
   * We can't believe this fell by the wayside.
+
+# 02020.01.25
+## Links  
+* [Finding Data Block Nirvana (a journey through the fastai data block API)](https://blog.usejournal.com/finding-data-block-nirvana-a-journey-through-the-fastai-data-block-api-c38210537fe4)
+
+# 02020.01.27
+## Goals for the Day  
+1. Lit review: constellation of links associated with the FastAI Lesson 3 video.
+2. Code review of same.
+3. Outline and begin experiments for people sensing
+  * We suspect this will be chiefly gathering datasets from the internet.
+  * Importantly, we would like the main thrust of the experiments to be done by end of operations 01.28; we want to have a goodly margin of time to work with the Pi and however the frontend ends up working out.
+
+## Links  
+* [Finding Data Block Nirvana (a journey through the fastai data block API)](https://blog.usejournal.com/finding-data-block-nirvana-a-journey-through-the-fastai-data-block-api-c38210537fe4)
+  * [Custom ItemList](https://docs.fast.ai/tutorial.itemlist.html)
+  * [GitHub - medium-finding-data-block-nirvana](https://github.com/ohmeow/dl-experiments/tree/master/medium-finding-data-block-nirvana)
+* [Multi-label prediction with Planet Amazon dataset](https://nbviewer.jupyter.org/github/fastai/course-v3/blob/master/nbs/dl1/lesson3-planet.ipynb)
+
+## Notes  
+Thinking about the data collection procedure. We can use the Selenium scraper to get a workable dataset. Thoughts:  
+* The main problem is "existence," that is, the presence of a human in the frame.
+  * Initial thought was to collect 1000 images of each of the following:
+    * Indoor images with humans
+    * Indoor images without humans
+    * Outdoor images with humans
+    * Outdoor images without humans
+  * Thinking about these, we started considering the following:  
+    * As mentioned in the articulation of goals, we want to experiment with the introduction of artifacts into the images to test generalization capacity.
+    * Having a small handful of categories for densities of humans.
+    * Additionally, natural variations in environment, lighting conditions, and subjects themselves may need to be considered, though this might be overdoing it for this preliminary stage of the project.
+    * Currently considering using the initial four types of variability for this stage of the project.
+    * Alternately, considering using images that exclusively have either *zero or one humans* in the frame. 
