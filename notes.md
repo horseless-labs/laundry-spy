@@ -135,3 +135,21 @@ Thinking about the data collection procedure. We can use the Selenium scraper to
     * Additionally, natural variations in environment, lighting conditions, and subjects themselves may need to be considered, though this might be overdoing it for this preliminary stage of the project.
     * Currently considering using the initial four types of variability for this stage of the project.
     * Alternately, considering using images that exclusively have either *zero or one humans* in the frame. 
+    * Why not both? Will work on noising, resizing, etc. later.
+    * Still need to check for the scaling and scanning procedure (whatever it is called) from the PyImageSearch site (assuming it is still relevant to our needs).
+
+Need to think of a way to partition and empty and occupied laundry rooms.
+
+Selection notes:  
+* Google Images often returns images that are, for want of a better term, overly archetypal. They may not generalize well to conventional imagery. Comparison may be a feature of the writeup.
+* Looking at indoor images, it might actually be better to scale the selection further, test on a sample gathered from the actual laundry room this will be tested in, and decide what to do from there.
+  * Current thought is to get a smattering of laundry room and basement images, a smattering of people, and see if the model can work out the presence in an individual person in the former.
+
+# 02020.01.28
+## Goals for the Day  
+1. Finish compilation of preliminary dataset
+2. Experiment and iterate on the above.
+3. Gather imagery from target laundry room (lighting conditions pending)
+
+## Notes  
+Running into a problem with one site; considering adding a block list.
