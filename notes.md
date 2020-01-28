@@ -153,3 +153,4 @@ Selection notes:
 
 ## Notes  
 Running into a problem with one site; considering adding a block list.
+We're getting to that point where we may need to start talking about how we're changing the scraper.
