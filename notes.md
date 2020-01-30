@@ -185,6 +185,10 @@ Considering adding a timeout mechanism/threading to the scraper, but that will c
 ## Goals for the Day  
 1. Experiment, yes, yes.
   * The first test needs to be redone so that the training model excludes "doing laundry."
+
+## Status  
+The original categories have been set up on Salamander. As a reminder of what we were doing: `test_2` is meant to hold out images of people doing laundry and people in inactive configurations.
+
 ## Notes  
 Possible directions for tests:  
 * Pointing the sensor at progressively smaller fragments of a person.
