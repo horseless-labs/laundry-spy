@@ -152,5 +152,62 @@ Selection notes:
 3. Gather imagery from target laundry room (lighting conditions pending)
 
 ## Notes  
-Running into a problem with one site; considering adding a block list.
+Running into a problem with one site; considering adding a block list.  
 We're getting to that point where we may need to start talking about how we're changing the scraper.
+
+# 02020.01.29  
+## Goals for the Day
+1. Experiment!
+
+## Notes  
+Downloading images of both empty and busy laundromats for safety.  
+  * Found an additional site that was causing problems with the scraper; wondering how the code could be modified to add these problem sites to the block list automatically.
+Thinking about how to partition images.  
+Starting to wonder if we are also dealing with weird network problems.  
+Considering adding a timeout mechanism/threading to the scraper, but that will come later. Partitioning.  
+
+## Test 1  
+* Test 1 partitions the data into two categories, "populated" and "unpopulated".
+* Considred further partitioning "populated" into people engaged in some kind of activity (e.g., crouching, doing laundry) and those that are just posing for the camera. This might be more suitable later.
+* The original categories are admittedly a bit ad hoc.
+* The purpose of this test is more to get a baseline.
+
+## Prospective small additions  
+* Helper that can repartition the data folders.
+  * This will be more important as testing continues in the cloud.
+  * This helper also needs to work against the existing block list.
+* Timeout functionality/threading for the scraper.
+* Move block list to separate file.
+* Move lists of categories to separate files.
+* Articulation of the reason for using a custom scraper (e.g., autonomous acquisition of URLs, more fine-grained control later) in its writeup.
+
+# 02020.01.30.md  
+## Goals for the Day  
+1. Experiment, yes, yes.
+  * The first test needs to be redone so that the training model excludes "doing laundry."
+## Notes  
+Possible directions for tests:  
+* Pointing the sensor at progressively smaller fragments of a person.
+  * Limbs
+  * Hands
+  * Feet
+  * Faces
+  * Eyes
+  * Hair
+  * Will skin tone matter for these?
+  * Lighting conditions?
+  * Experiment with OpenCV manipulations of these images
+  * ? Look for skin texture datasets and any standards for photographic post-processing of light.
+* Cartoonish or otherwise exaggerated representations.
+* Mannequins and statues
+* People in costume
+* People from greater distances or lower resolutions, e.g. CCTV imagery.
+
+* IMPORTANT: the model needs to distinguish someone doing laundry from a person just being there.
+
+Possible next steps:  
+* Test for the presence of laundry equipment and paraphernalia.
+* Recognition of gestural-type interactions with the above.
+  * The main thrust of this will probably be with the doors of the machine.
+  * EXPERIMENTAL: sum a number of categories of activity detected in sequence and get the model to try to decide that the person is done with the laundry room.
+* We still need to look at the scale and scan thing from PyImageSearch, but this might come later.
