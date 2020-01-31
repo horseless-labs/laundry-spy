@@ -185,6 +185,7 @@ Considering adding a timeout mechanism/threading to the scraper, but that will c
 ## Goals for the Day  
 1. Experiment, yes, yes.
   * The first test needs to be redone so that the training model excludes "doing laundry."
+2. Consider helper scripts, especially those for recompiling datasets.
 
 ## Status  
 The original categories have been set up on Salamander. As a reminder of what we were doing: `test_2` is meant to hold out images of people doing laundry and people in inactive configurations.
@@ -215,3 +216,6 @@ Possible next steps:
   * The main thrust of this will probably be with the doors of the machine.
   * EXPERIMENTAL: sum a number of categories of activity detected in sequence and get the model to try to decide that the person is done with the laundry room.
 * We still need to look at the scale and scan thing from PyImageSearch, but this might come later.
+
+## Some Results  
+* Taking a model that was trained on the `laundry_or_not_held_out` dataset (admittedly unbalanced)  and using it to predict those on `laundry_or_not` produces low error and validation loss, but even larger discrepancies between train and validation loss than the demonstration of leaky data with a model that was trained on `laundry_or_not` in the first place. We don't know why.
