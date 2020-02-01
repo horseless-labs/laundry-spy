@@ -219,3 +219,10 @@ Possible next steps:
 
 ## Some Results  
 * Taking a model that was trained on the `laundry_or_not_held_out` dataset (admittedly unbalanced)  and using it to predict those on `laundry_or_not` produces low error and validation loss, but even larger discrepancies between train and validation loss than the demonstration of leaky data with a model that was trained on `laundry_or_not` in the first place. We don't know why.
+
+# 02020.02.01  
+## Small next steps
+* Move block list to separate file.
+* Move classes to separate file.
+* Change scraper persistence mechanism to allow only links.
+* Change rename.py to allow filename conversion back to serialized format.
