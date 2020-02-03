@@ -3,3 +3,7 @@
 *.html
 *.txt
 *.zip
+*.jar
+.git.bfg-report/
+headed_image_scraper.py
+link_collater.py
